@@ -5,8 +5,8 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>Detail Produk - Faith Craft</title>
   <link href="https://fonts.googleapis.com/css2?family=Kanit:wght@300;400;500;600;700&display=swap" rel="stylesheet">
-  <link rel="stylesheet" href="/assets/css/style.css">
-  <link rel="stylesheet" href="/assets/css/product-detail.css">
+  <link rel="stylesheet" href="assets/css/style.css">
+  <link rel="stylesheet" href="assets/css/product-detail.css">
 </head>
 <body class="flex flex-col min-h-screen">
 
@@ -15,12 +15,12 @@
     <div class="container">
         <!-- Logo ikon kiri -->
         <div class="logo-left">
-            <img src="/assets/svg/logo.svg" alt="Logo Icon">
+            <img src="assets/svg/logo.svg" alt="Logo Icon">
         </div>
     
         <!-- Logo-type di tengah -->
         <div class="logo-center">
-            <img src="/assets/svg/logo-type.svg" alt="FaithCraft Logo Type">
+            <img src="assets/svg/logo-type.svg" alt="FaithCraft Logo Type">
         </div>
     
         <!-- Menu kanan -->
@@ -43,17 +43,17 @@
         <!-- Thumbnail kiri -->
         <div class="thumbnail-gallery">
           <div class="thumbnails">
-            <div class="thumb active"><img src="/assets/img/product/photo1.png" alt="Foto Product 1"></div>
-            <div class="thumb"><img src="/assets/img/product/photo2.png" alt="Foto Product 2"></div>
-            <div class="thumb"><img src="/assets/img/product/photo3.png" alt="Foto Product 3"></div>
-            <div class="thumb"><img src="/assets/img/product/photo4.png" alt="Foto Product 4"></div>
-            <div class="thumb"><img src="/assets/img/product/photo5.png" alt="Foto Product 5"></div>
+            <div class="thumb active"><img src="assets/img/product/photo1.png" alt="Foto Product 1"></div>
+            <div class="thumb"><img src="assets/img/product/photo2.png" alt="Foto Product 2"></div>
+            <div class="thumb"><img src="assets/img/product/photo3.png" alt="Foto Product 3"></div>
+            <div class="thumb"><img src="assets/img/product/photo4.png" alt="Foto Product 4"></div>
+            <div class="thumb"><img src="assets/img/product/photo5.png" alt="Foto Product 5"></div>
           </div>
         </div>
 
         <!-- Foto utama -->
         <div class="main-photo">
-          <img src="/assets/img/product/photo1.png" alt="Foto Produk Utama">
+          <img src="assets/img/product/photo1.png" alt="Foto Produk Utama">
         </div>
       </div>
   
@@ -65,9 +65,9 @@
   
         <p class="buy-now">Pesan Sekarang Lewat:</p>
         <div class="icon-button">
-          <a href="#"><img src="/assets/img/marketplace_logo/Shopee-Logo.png" alt="shopee"></a>
-          <a href="#"><img src="/assets/img/marketplace_logo/Tokopedia-Logo.png" alt="tokopedia"></a>
-          <a href="#"><img src="/assets/img/marketplace_logo/Tiktokshop-Logo.png" alt="Tiktokshop"></a>
+          <a href="#"><img src="assets/img/marketplace_logo/Shopee-Logo.png" alt="shopee"></a>
+          <a href="#"><img src="assets/img/marketplace_logo/Tokopedia-Logo.png" alt="tokopedia"></a>
+          <a href="#"><img src="assets/img/marketplace_logo/Tiktokshop-Logo.png" alt="Tiktokshop"></a>
         </div>
 
         <p class="description">
@@ -93,10 +93,10 @@
                 <div class="title">
                     Follow Kami
                 </div>
-                <a href="#"><img src="/assets/svg/icon-facebook.svg" alt="Facebook"></a>
-                <a href="#"><img src="/assets/svg/icon-instagram.svg" alt="Instagram"></a>
-                <a href="#"><img src="/assets/svg/icon-tiktok.svg" alt="TikTok"></a>
-                <a href="#"><img src="/assets/svg/icon-whatsapp.svg" alt="Whatsapp"></a>
+                <a href="#"><img src="assets/svg/icon-facebook.svg" alt="Facebook"></a>
+                <a href="#"><img src="assets/svg/icon-instagram.svg" alt="Instagram"></a>
+                <a href="#"><img src="assets/svg/icon-tiktok.svg" alt="TikTok"></a>
+                <a href="#"><img src="assets/svg/icon-whatsapp.svg" alt="Whatsapp"></a>
             </div>
         </div>
         <div class="footer-content">
@@ -130,7 +130,7 @@
   const params = new URLSearchParams(window.location.search);
   const productId = parseInt(params.get('id'));
 
-  fetch('/assets/data/products.json')
+  fetch('assets/data/products.json')
     .then(res => res.json())
     .then(products => {
       const product = products.find(p => p.id === productId);
@@ -168,13 +168,13 @@
       const iconButton = document.querySelector('.icon-button');
       iconButton.innerHTML = `
         <a href="${product.marketplaces.shopee}" target="_blank">
-          <img src="/assets/img/marketplace_logo/Shopee-Logo.png" alt="Shopee">
+          <img src="assets/img/marketplace_logo/Shopee-Logo.png" alt="Shopee">
         </a>
         <a href="${product.marketplaces.tokopedia}" target="_blank">
-          <img src="/assets/img/marketplace_logo/Tokopedia-Logo.png" alt="Tokopedia">
+          <img src="assets/img/marketplace_logo/Tokopedia-Logo.png" alt="Tokopedia">
         </a>
         <a href="${product.marketplaces.tiktok}" target="_blank">
-          <img src="/assets/img/marketplace_logo/Tiktokshop-Logo.png" alt="Tiktokshop">
+          <img src="assets/img/marketplace_logo/Tiktokshop-Logo.png" alt="Tiktokshop">
         </a>
       `;
 
