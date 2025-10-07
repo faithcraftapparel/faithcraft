@@ -7,7 +7,7 @@ container.innerHTML = `
   </div>
 `;
 
-fetch('../assets/data/products.json')
+fetch('assets/data/products.json')
   .then(res => res.json())
   .then(products => {
     // isi produk

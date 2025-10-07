@@ -6,9 +6,9 @@
     "finalPrice": 86000,
     "description": "Kemeja vintage bahan katun premium, nyaman dipakai sehari-hari.",
     "images": [
-      "../assets/img/product/photo1.png",
-      "../assets/img/product/photo2.png",
-      "../assets/img/product/photo3.png"
+      "assets/img/product/photo1.png",
+      "assets/img/product/photo2.png",
+      "assets/img/product/photo3.png"
     ],
     "marketplaces": {
       "shopee": "https://shopee.co.id/produk-vintage",
@@ -23,8 +23,8 @@
     "finalPrice": 72000,
     "description": "Kaos oversized bahan cotton combed 30s, adem dan ringan.",
     "images": [
-      "../assets/img/product/photo1.png",
-      "../assets/img/product/photo2.png"
+      "assets/img/product/photo1.png",
+      "assets/img/product/photo2.png"
     ],
     "marketplaces": {
       "shopee": "https://shopee.co.id/kaos-oversized",
@@ -39,8 +39,8 @@
     "finalPrice": 149000,
     "description": "Celana chino slimfit cocok untuk casual dan semi formal.",
     "images": [
-      "../assets/img/product/photo1.png",
-      "../assets/img/product/photo2.png"
+      "assets/img/product/photo1.png",
+      "assets/img/product/photo2.png"
     ],
     "marketplaces": {
       "shopee": "https://shopee.co.id/celana-chino",
@@ -55,8 +55,8 @@
     "finalPrice": 175000,
     "description": "Hoodie dengan bahan fleece tebal, cocok untuk cuaca dingin.",
     "images": [
-      "../assets/img/product/photo1.png",
-      "../assets/img/product/photo2.png"
+      "assets/img/product/photo1.png",
+      "assets/img/product/photo2.png"
     ],
     "marketplaces": {
       "shopee": "https://shopee.co.id/hoodie-zipper",
@@ -71,8 +71,8 @@
     "finalPrice": 125000,
     "description": "Kemeja bahan linen lembut, adem untuk dipakai harian.",
     "images": [
-      "../assets/img/product/photo1.png",
-      "../assets/img/product/photo2.png"
+      "assets/img/product/photo1.png",
+      "assets/img/product/photo2.png"
     ],
     "marketplaces": {
       "shopee": "https://shopee.co.id/kemeja-linen",
@@ -87,8 +87,8 @@
     "finalPrice": 152000,
     "description": "Sweater rajut motif retro dengan bahan lembut dan hangat.",
     "images": [
-      "../assets/img/product/photo1.png",
-      "../assets/img/product/photo2.png"
+      "assets/img/product/photo1.png",
+      "assets/img/product/photo2.png"
     ],
     "marketplaces": {
       "shopee": "https://shopee.co.id/sweater-retro",
@@ -103,8 +103,8 @@
     "finalPrice": 199000,
     "description": "Jaket denim original dengan potongan klasik yang stylish.",
     "images": [
-      "../assets/img/product/photo1.png",
-      "../assets/img/product/photo2.png"
+      "assets/img/product/photo1.png",
+      "assets/img/product/photo2.png"
     ],
     "marketplaces": {
       "shopee": "https://shopee.co.id/jaket-denim",
