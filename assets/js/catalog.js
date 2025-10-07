@@ -36,7 +36,7 @@ fetch('assets/data/products.json')
     document.querySelectorAll('.product-card').forEach(card => {
       card.addEventListener('click', () => {
         const id = card.dataset.id;
-        window.location.href = `/product/?id=${id}`;
+        window.location.href = `./product/?id=${id}`;
       });
     });
   })
