@@ -7,7 +7,7 @@ container.innerHTML = `
   </div>
 `;
 
-fetch('assets/data/new-products.json')
+fetch('/assets/data/new-products.json')
   .then(res => res.json())
   .then(products => {
     // isi produk
@@ -36,7 +36,7 @@ fetch('assets/data/new-products.json')
     document.querySelectorAll('.product-card').forEach(card => {
       card.addEventListener('click', () => {
         const id = card.dataset.id;
-        window.location.href = `./product.html?id=${id}`;
+        window.location.href = `./product/?id=${id}`;
       });
     });
   })
