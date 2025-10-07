@@ -1,0 +1,190 @@
+.wrapper {
+    display: flex;
+    padding: 2rem 0;
+}
+
+.photo-product {
+  display: inline-flex;
+  gap: 1rem;
+  flex: 1.5;
+}
+
+.thumbnail-gallery {
+  width: 120px; /* lebar area thumbnail */
+  overflow-y: auto;
+  max-height: 600px; /* mengikuti tinggi foto utama */
+}
+
+.thumbnail-gallery::-webkit-scrollbar {
+  display: none; /* sembunyiin scrollbar */
+}
+
+.thumbnails {
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+}
+
+.thumbnails img {
+  width: 100%;
+  cursor: pointer;
+  object-fit: cover;
+  position: relative;
+  transition: transform 0.3s ease;
+}
+
+/* Bungkus biar bisa pasang overlay */
+.thumbnails .thumb {
+  position: relative;
+  overflow: hidden;
+}
+
+.thumbnails .thumb::after {
+  content: "";
+  position: absolute;
+  inset: 0;
+  background: rgba(255, 255, 255, 0.6); /* overlay default */
+  opacity: 1;
+  transition: opacity 0.3s ease;
+  pointer-events: none; /* biar tidak ganggu klik/drag */
+}
+
+/* Thumbnail aktif → overlay hilang */
+.thumbnails .thumb.active::after {
+  opacity: 0;
+}
+
+/* Hover → zoom + overlay hilang sementara */
+.thumbnails .thumb:hover img {
+  transform: scale(1.05);
+}
+
+.thumbnails .thumb:hover::after {
+  opacity: 0;
+}
+
+.main-photo {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.main-photo img {
+  width: 100%;
+  height: auto;
+  max-height: 600px; /* biar tidak terlalu tinggi */
+  object-fit: contain;
+}
+
+.product-info {
+    flex: 0.7;
+    padding-left: 2%;
+}
+
+.product-info .product-name {
+    font-size: 22px;
+    font-weight: 600;
+    letter-spacing: 1px;
+    text-transform: uppercase;
+    padding-bottom: 8px;
+    line-height: 24px;
+}
+
+.product-info .final-price {
+    display: inline;
+    font-size: 20px;
+    font-weight: 600;
+    color: #c0392b;
+}
+
+.product-info .product-price {
+    display: inline;
+    font-size: 20px;
+    text-decoration: line-through;
+    color: #888;
+    margin-left: 1rem;
+}
+.product-info .description {
+    font-size: 14px;
+    margin-top: 12px;
+}
+
+.product-info .buy-now {
+    font-size: 14px;
+    margin-bottom: 8px;
+}
+
+.icon-button {
+    display: inline-flex;
+    gap: 1rem;
+}
+
+.icon-button a {
+    display: flex;
+    text-decoration: none;
+    align-items: center;
+    justify-content: center;
+    width: 60px;
+    height: 60px;
+    background: #fff;
+    border-radius: 8px;
+    box-shadow: 0 2px 6px rgba(0,0,0,0.25);
+    transition: transform 0.2s ease, box-shadow 0.2s ease;
+}
+
+.icon-button a:hover {
+  transform: translateY(-3px);
+  box-shadow: 0 4px 10px rgba(0,0,0,0.15);
+}
+
+.icon-button img {
+    width: 50px;
+    height: auto;
+}
+
+/* Responsive */
+@media (max-width: 768px) {
+  .wrapper {
+    display: block;
+    padding: 1rem 0;
+  }
+
+  .photo-product {
+    display: flex;
+    flex-direction: column; /* susun vertikal */
+  }
+
+  .main-photo {
+    order: 1; /* tampil dulu */
+    width: 100%;
+    margin-bottom: 0.5rem;
+  }
+
+  .thumbnail-gallery {
+    order: 2; /* thumbnail di bawah */
+    width: 100%;
+    max-height: none;
+    overflow-x: auto;
+    overflow-y: hidden;
+  }
+
+  .thumbnails {
+    flex-direction: row; /* horizontal */
+    gap: 10px;
+  }
+
+  .thumbnails .thumb {
+    flex: 0 0 auto;
+    width: 80px; /* ukuran thumbnail di mobile */
+  }
+
+  .thumbnails img {
+    width: 100%;
+    height: auto;
+  }
+
+  .product-info {
+    padding-left: 0;
+    margin-top: 1.5rem;
+  }
+}

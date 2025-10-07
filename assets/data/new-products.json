@@ -1,0 +1,115 @@
+[
+  {
+    "id": 1,
+    "name": "Kemeja Vintage Premium",
+    "price": 120000,
+    "finalPrice": 86000,
+    "description": "Kemeja vintage bahan katun premium, nyaman dipakai sehari-hari.",
+    "images": [
+      "../assets/img/product/photo1.png",
+      "../assets/img/product/photo2.png",
+      "../assets/img/product/photo3.png"
+    ],
+    "marketplaces": {
+      "shopee": "https://shopee.co.id/produk-vintage",
+      "tokopedia": "https://tokopedia.com/produk-vintage",
+      "tiktok": "https://tiktok.com/produk-vintage"
+    }
+  },
+  {
+    "id": 2,
+    "name": "Kaos Polos Oversized",
+    "price": 95000,
+    "finalPrice": 72000,
+    "description": "Kaos oversized bahan cotton combed 30s, adem dan ringan.",
+    "images": [
+      "../assets/img/product/photo1.png",
+      "../assets/img/product/photo2.png"
+    ],
+    "marketplaces": {
+      "shopee": "https://shopee.co.id/kaos-oversized",
+      "tokopedia": "https://tokopedia.com/kaos-oversized",
+      "tiktok": "https://tiktok.com/kaos-oversized"
+    }
+  },
+  {
+    "id": 3,
+    "name": "Celana Chino Slimfit",
+    "price": 180000,
+    "finalPrice": 149000,
+    "description": "Celana chino slimfit cocok untuk casual dan semi formal.",
+    "images": [
+      "../assets/img/product/photo1.png",
+      "../assets/img/product/photo2.png"
+    ],
+    "marketplaces": {
+      "shopee": "https://shopee.co.id/celana-chino",
+      "tokopedia": "https://tokopedia.com/celana-chino",
+      "tiktok": "https://tiktok.com/celana-chino"
+    }
+  },
+  {
+    "id": 4,
+    "name": "Hoodie Zipper Premium",
+    "price": 210000,
+    "finalPrice": 175000,
+    "description": "Hoodie dengan bahan fleece tebal, cocok untuk cuaca dingin.",
+    "images": [
+      "../assets/img/product/photo1.png",
+      "../assets/img/product/photo2.png"
+    ],
+    "marketplaces": {
+      "shopee": "https://shopee.co.id/hoodie-zipper",
+      "tokopedia": "https://tokopedia.com/hoodie-zipper",
+      "tiktok": "https://tiktok.com/hoodie-zipper"
+    }
+  },
+  {
+    "id": 5,
+    "name": "Kemeja Linen Casual",
+    "price": 160000,
+    "finalPrice": 125000,
+    "description": "Kemeja bahan linen lembut, adem untuk dipakai harian.",
+    "images": [
+      "../assets/img/product/photo1.png",
+      "../assets/img/product/photo2.png"
+    ],
+    "marketplaces": {
+      "shopee": "https://shopee.co.id/kemeja-linen",
+      "tokopedia": "https://tokopedia.com/kemeja-linen",
+      "tiktok": "https://tiktok.com/kemeja-linen"
+    }
+  },
+  {
+    "id": 6,
+    "name": "Sweater Rajut Retro",
+    "price": 185000,
+    "finalPrice": 152000,
+    "description": "Sweater rajut motif retro dengan bahan lembut dan hangat.",
+    "images": [
+      "../assets/img/product/photo1.png",
+      "../assets/img/product/photo2.png"
+    ],
+    "marketplaces": {
+      "shopee": "https://shopee.co.id/sweater-retro",
+      "tokopedia": "https://tokopedia.com/sweater-retro",
+      "tiktok": "https://tiktok.com/sweater-retro"
+    }
+  },
+  {
+    "id": 7,
+    "name": "Jaket Denim Original",
+    "price": 250000,
+    "finalPrice": 199000,
+    "description": "Jaket denim original dengan potongan klasik yang stylish.",
+    "images": [
+      "../assets/img/product/photo1.png",
+      "../assets/img/product/photo2.png"
+    ],
+    "marketplaces": {
+      "shopee": "https://shopee.co.id/jaket-denim",
+      "tokopedia": "https://tokopedia.com/jaket-denim",
+      "tiktok": "https://tiktok.com/jaket-denim"
+    }
+  }
+]

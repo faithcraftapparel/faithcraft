@@ -1,0 +1,157 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>FaithCraft - Beranda</title>
+  <link href="https://fonts.googleapis.com/css2?family=Kanit:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="../assets/css/style.css">
+  <link rel="stylesheet" href="../assets/css/home.css">
+</head>
+
+<body>
+  <!-- Navbar -->
+  <header class="navbar">
+    <div class="container">
+        <!-- Logo ikon kiri -->
+        <div class="logo-left">
+            <img src="../assets/svg/logo.svg" alt="Logo Icon">
+        </div>
+    
+        <!-- Logo-type di tengah -->
+        <div class="logo-center">
+            <img src="../assets/svg/logo-type.svg" alt="FaithCraft Logo Type">
+        </div>
+    
+        <!-- Menu kanan -->
+        <nav class="nav-links">
+            <a href="index.html">Beranda</a>
+            <a href="catalog.html">Katalog</a>
+        </nav>
+    
+        <!-- Hamburger menu untuk mobile -->
+        <div class="menu-toggle" id="menu-toggle">☰</div>
+    </div>
+  </header>
+  <div class="overlay" id="overlay"></div>
+
+  <main>
+      <!-- Banner -->
+      <section class="banner">
+        <div class="container">
+        <div class="banner-slider">
+          <div class="slide active">
+            <img src="../assets/img/banner/banner1.png" alt="Banner 1">
+          </div>
+          <div class="slide">
+            <img src="../assets/img/banner/banner2.png" alt="Banner 2">
+          </div>
+          <div class="slide">
+            <img src="../assets/img/banner/banner3.png" alt="Banner 3">
+          </div>
+        </div>
+        <!-- Indicator -->
+        <div class="banner-indicators">
+          <span class="dot active"></span>
+          <span class="dot"></span>
+          <span class="dot"></span>
+        </div>
+      </div>
+      </section>
+    
+      <!-- Produk -->
+      <section class="products">
+      <h2>PRODUK TERBARU DARI FAITHCRAFT</h2>
+      <div class="product-slider" id="product-list">
+        <div class="loading-wrapper">
+          <div class="spinner"></div>
+        </div>
+      </div>
+        <div class="button-wrapper">
+            <a href="catalog.html" class="btn btn-primary">Lihat Semua</a>
+        </div>
+    </section>
+  </main>
+
+  <!-- Footer -->
+  <footer class="footer">
+    <div class="container">
+        <div class="footer-content">
+            <div class="footer-contact">
+                <div class="title">
+                    Kontak
+                </div>
+                <p>Shifa residence blok k no 14 kelurahan jayamekar,<br>
+                Kecamatan Baros, Kota Sukabumi Jawa Barat<br>
+                +62 877-8313-0498</p>
+            </div>
+            <div class="footer-socials">
+                <div class="title">
+                    Follow Kami
+                </div>
+                <a href="#"><img src="../assets/svg/icon-facebook.svg" alt="Facebook"></a>
+                <a href="#"><img src="../assets/svg/icon-instagram.svg" alt="Instagram"></a>
+                <a href="#"><img src="../assets/svg/icon-tiktok.svg" alt="TikTok"></a>
+                <a href="#"><img src="../assets/svg/icon-whatsapp.svg" alt="Whatsapp"></a>
+            </div>
+        </div>
+        <div class="footer-content">
+            <div class="footer-copyright">
+                <p>Hak Cipta © FAITHCRAFT Semua hak dilindungi undang-undang.</p>
+            </div>
+            <div class="footer-copyright">
+                <p>FAITHCRAFT © 2025</p>
+            </div>
+        </div>
+    </div>
+  </footer>
+
+  <script src="../assets/js/product-slider.js"></script>
+  <script>
+    // side nav
+    const menuToggle = document.getElementById('menu-toggle');
+    const navLinks = document.querySelector('.nav-links');
+    const overlay = document.getElementById('overlay');
+
+    menuToggle.addEventListener('click', () => {
+        navLinks.classList.toggle('active');
+        overlay.style.display = navLinks.classList.contains('active') ? 'block' : 'none';
+    });
+
+    overlay.addEventListener('click', () => {
+        navLinks.classList.remove('active');
+        overlay.style.display = 'none';
+    });
+
+    // slider
+    const slider = document.querySelector('.banner-slider');
+    const slides = document.querySelectorAll('.banner-slider .slide');
+    const dots = document.querySelectorAll('.banner-indicators .dot');
+    let currentIndex = 0;
+    const totalSlides = slides.length;
+
+    function showSlide(index) {
+        slider.style.transform = `translateX(-${index * 100}%)`;
+        dots.forEach((dot, i) => {
+        dot.classList.toggle('active', i === index);
+        });
+    }
+
+    function nextSlide() {
+        currentIndex = (currentIndex + 1) % totalSlides;
+        showSlide(currentIndex);
+    }
+
+    // Auto slide tiap 4 detik
+    setInterval(nextSlide, 4000);
+
+    // Klik dot manual
+    dots.forEach((dot, index) => {
+        dot.addEventListener('click', () => {
+        currentIndex = index;
+        showSlide(currentIndex);
+        });
+    });
+  </script>
+</body>
+</html>

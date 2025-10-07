@@ -1,0 +1,102 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Katalog - Faith Craft</title>
+  <link href="https://fonts.googleapis.com/css2?family=Kanit:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="../assets/css/style.css">
+  <link rel="stylesheet" href="../assets/css/catalog.css">
+</head>
+
+<body>
+  <!-- Navbar -->
+  <header class="navbar">
+    <div class="container">
+        <!-- Logo ikon kiri -->
+        <div class="logo-left">
+            <img src="../assets/svg/logo.svg" alt="Logo Icon">
+        </div>
+    
+        <!-- Logo-type di tengah -->
+        <div class="logo-center">
+            <img src="../assets/svg/logo-type.svg" alt="FaithCraft Logo Type">
+        </div>
+    
+        <!-- Menu kanan -->
+        <nav class="nav-links">
+            <a href="index.html">Beranda</a>
+            <a href="catalog.html">Katalog</a>
+        </nav>
+    
+        <!-- Hamburger menu untuk mobile -->
+        <div class="menu-toggle" id="menu-toggle">☰</div>
+    </div>
+  </header>
+  <div class="overlay" id="overlay"></div>
+
+  <!-- CONTENT -->
+  <main>
+    <div class="container">
+      <h2 class="title">KATALOG PRODUK</h2>
+      <div class="product-list" id="product-list">
+        <div class="loading-wrapper">
+          <div class="spinner"></div>
+        </div>
+      </div>
+    </div>
+      <!-- Tambahkan produk lain -->
+  </main>
+
+  <!-- Footer -->
+  <footer class="footer">
+    <div class="container">
+        <div class="footer-content">
+            <div class="footer-contact">
+                <div class="title">
+                    Kontak
+                </div>
+                <p>Shifa residence blok k no 14 kelurahan jayamekar,<br>
+                Kecamatan Baros, Kota Sukabumi Jawa Barat<br>
+                +62 877-8313-0498</p>
+            </div>
+            <div class="footer-socials">
+                <div class="title">
+                    Follow Kami
+                </div>
+                <a href="#"><img src="../assets/svg/icon-facebook.svg" alt="Facebook"></a>
+                <a href="#"><img src="../assets/svg/icon-instagram.svg" alt="Instagram"></a>
+                <a href="#"><img src="../assets/svg/icon-tiktok.svg" alt="TikTok"></a>
+                <a href="#"><img src="../assets/svg/icon-whatsapp.svg" alt="Whatsapp"></a>
+            </div>
+        </div>
+        <div class="footer-content">
+            <div class="footer-copyright">
+                <p>Hak Cipta © FAITHCRAFT Semua hak dilindungi undang-undang.</p>
+            </div>
+            <div class="footer-copyright">
+                <p>FAITHCRAFT © 2025</p>
+            </div>
+        </div>
+    </div>
+  </footer>
+
+  <script src="../assets/js/catalog.js"></script>
+  <script>
+    // side nav
+    const menuToggle = document.getElementById('menu-toggle');
+    const navLinks = document.querySelector('.nav-links');
+    const overlay = document.getElementById('overlay');
+
+    menuToggle.addEventListener('click', () => {
+        navLinks.classList.toggle('active');
+        overlay.style.display = navLinks.classList.contains('active') ? 'block' : 'none';
+    });
+
+    overlay.addEventListener('click', () => {
+        navLinks.classList.remove('active');
+        overlay.style.display = 'none';
+    });
+  </script>
+</body>
+</html>
